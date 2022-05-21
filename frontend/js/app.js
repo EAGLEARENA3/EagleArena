@@ -5,11 +5,11 @@ window.addEventListener("DOMContentLoaded", async () => {
   const welcomeH1 = document.getElementById("welcomeH1");
   const welcomeH2 = document.getElementById("welcomeH2");
   const welcomeP = document.getElementById("welcomeP");
-
+/*
   welcomeH1.innerText = welcome_h1;
   welcomeH2.innerText = welcome_h2;
   welcomeP.innerHTML = welcome_p;
-
+*/
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum);
     checkChain();
@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     // Check if User is already connected by retrieving the accounts
     await window.web3.eth.getAccounts().then(async (addr) => {
       accounts = addr;
+
     });
   }
 
@@ -64,17 +65,20 @@ const updateConnectStatus = async () => {
     };
   } else if (accounts && accounts.length > 0) {
     onboardButton.innerText = `✔ ...${accounts[0].slice(-4)}`;
+	
     window.address = accounts[0];
     onboardButton.disabled = true;
     onboarding.stopOnboarding();
     notConnected.classList.remove('show-not-connected');
     notConnected.classList.add('hidden');
     // SHOW SPINNER
+	
     spinner.classList.remove('hidden');
     window.contract = new web3.eth.Contract(abi, contractAddress);
     loadInfo();
+		 
   } else {
-    onboardButton.innerText = "Connect MetaMask!";
+    onboardButton.innerText = "Connect MetaMasksx!";
     // HIDE SPINNER
     spinner.classList.add('hidden');
     notConnected.classList.remove('hidden');
@@ -89,6 +93,8 @@ const updateConnectStatus = async () => {
           notConnected.classList.remove('show-not-connected');
           notConnected.classList.add('hidden');
           // SHOW SPINNER
+		   alert("show");
+	  $("#not-connected").show();
           spinner.classList.remove('hidden');
           onboardButton.disabled = true;
           window.address = accts[0];
@@ -244,6 +250,7 @@ async function loadInfo() {
   const min = mintInput.attributes.min.value || false;
   const max = mintInput.attributes.max.value || false;
   mintDecrement.onclick = () => {
+	  
     let value = parseInt(mintInput.value) - 1 || 1;
     if(!min || value >= min) {
       mintInput.value = value;
@@ -298,6 +305,8 @@ function setTotalPrice() {
 }
 
 async function mint() {
+	
+	alert("test");
   const mintButton = document.getElementById("mintButton");
   mintButton.disabled = true;
   const spinner = '<div class="dot-elastic"></div><span>Waiting for transaction...</span>';
