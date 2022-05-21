@@ -9,7 +9,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Eagle Arena";
 const description = "Eagle arena is a game filled with fantastic battle ready Eagles, where players can collect them as pets";
-const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
+const baseUri = "ipfs://bafybeieejh6j4izyqusqcyaedzlfjrbnihgaqgpgdha5p7ty5jjd52lgke"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
