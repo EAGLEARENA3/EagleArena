@@ -7,22 +7,21 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Eagle Arena TEST";
+const namePrefix = "Eagle Arena";
 const description = "Eagle arena is a game filled with fantastic battle ready Eagles, where players can collect them as pets";
-const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
+const baseUri = "ipfs://bafybeieejh6j4izyqusqcyaedzlfjrbnihgaqgpgdha5p7ty5jjd52lgke"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo:10,
+    growEditionSizeTo: 5,
     layersOrder: [
       { name: "Background" },
-      { name: "Weapon Set 1" },
+      { name: "Weapon" },
       { name: "Body" },
-      { name: "Ankle Set 1" },
-      
-      { name: "Chest Set 1" },
-      { name: "Belt Set 1" },
+      { name: "Ankle" },
+      { name: "Belt" },
+      { name: "Chest" },
     ],
   },
 ];
@@ -49,8 +48,8 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Eagle Arnea TEST';
-const CONTRACT_SYMBOL = 'EAT';
+const CONTRACT_NAME = 'Eagle Arnea';
+const CONTRACT_SYMBOL = 'EAN';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x22C8889A3a2D00Fb3A40a0e3a0A336Ba28Ff973a';
 const TREASURY_ADDRESS = '0x22C8889A3a2D00Fb3A40a0e3a0A336Ba28Ff973a';
