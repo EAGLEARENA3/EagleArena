@@ -9,19 +9,20 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "Eagle Arena";
 const description = "Eagle arena is a game filled with fantastic battle ready Eagles, where players can collect them as pets";
-const baseUri = "ipfs://bafybeieejh6j4izyqusqcyaedzlfjrbnihgaqgpgdha5p7ty5jjd52lgke"; // This will be replaced automatically
+const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo:10,
     layersOrder: [
       { name: "Background" },
-      { name: "Weapon" },
+      { name: "Weapon Set 1" },
       { name: "Body" },
-      { name: "Ankle" },
-      { name: "Belt" },
-      { name: "Chest" },
+      { name: "Ankle Set 1" },
+      
+      { name: "Chest Set 1" },
+      { name: "Belt Set 1" },
     ],
   },
 ];
@@ -45,11 +46,11 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 2; // Your API key rate limit
-const CHAIN = 'rinkeby'; // only rinkeby or polygon
+const CHAIN = 'polygon'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'Eagle Arnea';
-const CONTRACT_SYMBOL = 'EAN';
+const CONTRACT_SYMBOL = 'EAT';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x22C8889A3a2D00Fb3A40a0e3a0A336Ba28Ff973a';
 const TREASURY_ADDRESS = '0x22C8889A3a2D00Fb3A40a0e3a0A336Ba28Ff973a';
